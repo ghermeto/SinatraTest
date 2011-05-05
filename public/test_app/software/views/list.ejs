@@ -1,0 +1,30 @@
+<table border="1" cellpadding="3" cellspacing="2">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Developer</th>
+            <th>Category</th>
+            <td></td>
+        </tr>
+    </thead>
+<tbody>
+<% for(var row = 0; row < results.length; row++){ %>
+        <tr>
+            <td>
+              <%=results[row].name%>
+            </td>
+            <td>
+              <%=results[row].developer%>
+            </td>
+            <td>
+              <%=results[row].category%>
+            </td>
+            <td>
+              <a href="#" class="edit" title="<%=results[row].id%>">edit</a>
+              <a href="#" class="delete" title="<%=results[row].id%>">delete</a>
+            </td>
+        </tr>
+<%}%>
+</tbody>
+</table>
+<input type="button" class="add" value="Add New Software" />

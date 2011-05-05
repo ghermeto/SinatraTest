@@ -1,0 +1,19 @@
+<form>
+    <table>
+        <%for (var attr in TestApp.Models.Software.attributes) {%>
+        <% if(attr == 'id') continue; %>
+        <tr>
+            <td><label for="<%=attr%>"><%=attr%></label></td>
+            <td><input type="text" value="<%=result[attr]%>" name="<%=attr%>" /></td>
+        </tr>
+        <%}%>
+        <tr>
+            <td colspan="2" align="center">
+                <% if(result['id']) { %>
+                <input type="hidden" name="id" value="<%=result['id']%>"/>
+                <% } %>
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </table>
+</form>
