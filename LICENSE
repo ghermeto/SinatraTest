@@ -1,3 +1,20 @@
 == SinatraTest
 
-Put appropriate LICENSE for your project here.
+This is a simple test app, so do whatever you want with it, but remember that it
+uses Sinatra, JavascriptMVC and jQuery and these softwares have licences of
+their own.
+
+Javascript MVC Licence
+----------------------
+
+JavaScriptMVC is MIT with the following exceptions:
+
+Rhino - JS command line (MPL 1.1)
+Selenium - Browser Automation (Apache 2)
+
+jQuery Licence is MIT or GPL v2
+http://jquery.org/license/
+
+Sinatra Licence is MIT
+https://github.com/sinatra/sinatra/blob/master/LICENSE
+

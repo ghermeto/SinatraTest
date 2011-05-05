@@ -1,3 +1,12 @@
 == SinatraTest
 
-You should document your project here.
+To run the application:
+
+On the ommand line:
+ruby ./lib/main.rb
+
+On the browser:
+http://localhost:4455
+
+HAVE FUN!
+
