@@ -2,10 +2,14 @@
 
 To run the application:
 
-On the command line:
+1) start couchdb
+
+2) start the app
+
+2.1) On the command line:
 ruby ./lib/main.rb
 
-On the browser:
+2.2) On the browser:
 http://localhost:4455
 
 HAVE FUN!
