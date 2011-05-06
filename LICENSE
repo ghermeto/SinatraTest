@@ -12,8 +12,14 @@ JavaScriptMVC is MIT with the following exceptions:
 Rhino - JS command line (MPL 1.1)
 Selenium - Browser Automation (Apache 2)
 
+jQuery Licence
+--------------
+
 jQuery Licence is MIT or GPL v2
 http://jquery.org/license/
+
+Sinatra Licence
+---------------
 
 Sinatra Licence is MIT
 https://github.com/sinatra/sinatra/blob/master/LICENSE

@@ -18,6 +18,9 @@ steal.plugins(
         show: function(result) {
             $('#mutable').html(this.view('edit', {result: result} ));
         },
+        update: function() {
+            this.init();
+        },
         '.edit click': function(el, evt) {
             evt.preventDefault();
             TestApp.Models.Software.find($(el).attr('title'), this.callback('show'));

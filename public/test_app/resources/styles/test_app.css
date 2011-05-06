@@ -1,0 +1,109 @@
+/* 
+    Document   : test_app
+    Created on : 06/05/2011, 00:48:51
+    Author     : Guilherme Hermeto
+    Description:
+        Style SinatraTestApp
+*/
+
+html, body {
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 20px 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 20px 10px;
+}
+
+p {
+    padding-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 5px;
+}
+
+table td {
+    vertical-align: top;
+}
+
+table.content {
+    margin: 10px;
+    border: 1px solid #999;
+}
+
+table.content thead tr {
+    background-color: #f0f0f0;
+    font-size: 1.2em;
+}
+
+table.content th {
+    text-align: left;
+    padding: 5px 20px;
+}
+
+table.content td {
+    padding: 8px 22px;
+    border-top: 1px dotted #999;
+}
+
+table.content a {
+    margin: 0 10px;
+}
+
+table td.b-right {
+    border-right: 1px dotted #ccc;
+}
+
+input.add, input.create {
+    margin: 10px;
+}
+
+p.init {
+    margin: 60px 0 0 0;
+    font-size: 1.2em;
+}
+
+form table{
+    border-spacing: 10px;
+    border: 1px solid #ccc;
+}
+
+form input[type='text'] {
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+form label {
+    font-size: 1.1em;
+}
+
+.header {
+    height: 80px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.header h1 {
+    font-size: 2.6em;
+    margin: 5px 10px;
+}
+
+.header h2 {
+    font-size: 1.2em;
+    margin: 10px 0 0 10px;
+}
+
+#main {
+    margin-left: 10px;
+}

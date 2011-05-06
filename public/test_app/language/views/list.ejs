@@ -2,9 +2,9 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Developer</th>
-            <th>Category</th>
-            <th></th>
+            <th>Type</th>
+            <th>Use</th>
+            <th>Paradigm</th>
         </tr>
     </thead>
 <tbody>
@@ -14,17 +14,15 @@
               <%=results[row].name%>
             </td>
             <td>
-              <%=results[row].developer%>
+              <%=results[row].type%>
             </td>
             <td>
-              <%=results[row].category%>
+              <%=results[row].use%>
             </td>
             <td>
-              <a href="#" class="edit" title="<%=results[row].id%>">edit</a>
-              <a href="#" class="delete" title="<%=results[row].id%>">delete</a>
+              <%=results[row].paradigm%>
             </td>
         </tr>
 <%}%>
 </tbody>
 </table>
-<input type="button" class="add" value="Add New Software" />

@@ -3,15 +3,28 @@
 require 'rubygems'
 require 'sinatra/base'
 require 'json'
+require 'couch'
 
 class SinatraTest < Sinatra::Base
 
   set :root, File.dirname(__FILE__) + '/../'
+  set :show_exceptions, false
   set :environment, :development
   set :port, 4455
 
+  CouchError = Class.new(StandardError)
+
   configure :development do
     set :file, 'softwares.json'
+    set :couch_host, 'localhost'
+    set :couch_port, 5984
+    set :couch_load, 'languages.json'
+  end
+
+  # if we get an error from couch
+  error CouchError do
+    content_type :json
+    { "message" => env['sinatra.error'].message }.to_json
   end
 
   #before filter for the /filter route
@@ -93,10 +106,41 @@ class SinatraTest < Sinatra::Base
     {"success" => true}.to_json
   end
 
+  # gets all the entries in the couchdb sinatratest/languages
+  get '/couchdb' do
+    content_type :json
+    begin
+      couch = couch_conn
+      res = couch.get("/sinatratest/languages")
+      json = JSON.parse res.body
+      json['list'].to_json
+    rescue => e
+      raise CouchError, e
+    end
+  end
+
+  # creates the couchdb database
+  post '/couchdb' do
+    content_type :json
+    couch = couch_conn
+    # creates the database on couch
+    couch.put("/sinatratest", "")
+    #creates a languages document and load with the json file content
+    couch.put("/sinatratest/languages", File.read(options.couch_load))
+    {"success" => true}.to_json
+  end
+
   # fix the ids when a delete happens
   def fix_id array
     array.sort! { |a,b| a['id'] <=> b['id'] }.each_with_index { |e, i| array[i]['id'] = "#{i+1}"  }
     array
+  end
+
+  # connects to couchdb
+  # should be changed to a proper gem
+  def couch_conn
+    couch = Couch::Server.new(options.couch_host, options.couch_port)
+    couch
   end
 
 end

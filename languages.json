@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "name": "Java",
+      "type": "Server Side",
+      "use": "Application, Web",
+      "paradigm": "imperative, object-oriented, generic, reflective"
+    },
+    {
+      "name": "Javscript",
+      "type": "Client Side",
+      "use": "Web",
+      "paradigm": "imperative, prototype-based, functional, reflective"
+    },
+    {
+      "name": "Perl",
+      "type": "Server Side",
+      "use": "Application, Text processing, Scripting, Web",
+      "paradigm": "imperative, procedural, reflective, functional, object-oriented, generic"
+    },
+    {
+      "name": "PHP",
+      "type": "Server Side",
+      "use": "Web",
+      "paradigm": "imperative, procedural, object-oriented, reflective"
+    },
+    {
+      "name": "Ruby",
+      "type": "Server Side",
+      "use": "Application, Scripting, Web",
+      "paradigm": "imperative, object-oriented, aspect-oriented, reflective, functional"
+    }
+  ]
+}

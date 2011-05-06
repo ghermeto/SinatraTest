@@ -5,10 +5,27 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="author" content="Guilherme Hermeto" />
         <meta name="description" content="Testing Javascript MVC and Sinatra" />
+        <link href="resources/styles/test_app.css" rel="stylesheet" />
         <title>TestApp</title>
     </head>
     <body>
-        <div id="software"></div>
+        <div class="header">
+            <h1>SinatraTest</h1>
+            <h2>Sinatra and Javascript MVC Test Application</h2>
+        </div>
+        <table width="100%">
+            <tr>
+                <td width="150" class="b-right">
+                    <div id="menu">
+                    </div>
+                </td>
+                <td>
+                    <div id="main">
+                        <p class="init">Please select an item from the left side menu.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
         <script type='text/javascript' src='../steal/steal.js?test_app,development'></script>
     </body>
 </html>

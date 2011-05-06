@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
-require './lib/sinatratest.rb'
+$LOAD_PATH << './lib'
+require 'sinatratest'
 
 SinatraTest.run!
