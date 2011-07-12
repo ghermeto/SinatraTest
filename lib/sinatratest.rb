@@ -19,6 +19,8 @@ class SinatraTest < Sinatra::Base
     set :couch_load, 'languages.json'
   end
 
+  mime_type :ejs, 'text/html'
+
   # if we get an error from couch
   error CouchError do
     content_type :json
