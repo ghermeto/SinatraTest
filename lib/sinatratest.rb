@@ -9,8 +9,6 @@ class SinatraTest < Sinatra::Base
 
   set :root, File.dirname(__FILE__) + '/../'
   set :show_exceptions, false
-  set :environment, :development
-  set :port, 4455
 
   CouchError = Class.new(StandardError)
 
