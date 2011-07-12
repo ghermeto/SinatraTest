@@ -41,6 +41,10 @@ class SinatraTest < Sinatra::Base
     puts "Here we can transform the response"
   end
 
+  get '/mu-280f6174-a96259a3-fe938e39-954be80a' do
+    '42'
+  end
+
   #404
   not_found do
     'Is this a 404 message?'
