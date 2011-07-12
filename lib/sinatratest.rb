@@ -7,7 +7,6 @@ require 'couch'
 
 class SinatraTest < Sinatra::Base
 
-  set :port, ENV['PORT']
   set :root, File.dirname(__FILE__) + '/../'
   set :show_exceptions, false
 
