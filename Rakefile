@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'rake'
 require 'rspec/core/rake_task'
+require 'pp'
+
+pp ENV.to_hash
 
 desc "Run all the specs"
 RSpec::Core::RakeTask.new do |t|
